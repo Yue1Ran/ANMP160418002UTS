@@ -41,7 +41,7 @@ class ProfilFragment : Fragment() {
 //
 //    private fun loginUser() {
 //        val queue = Volley.newRequestQueue(this)
-//        val url = "http://10.0.2.2/anmp_uts_service/login.php"
+//        val url = "http://10.0.2.2/anmp_uts/update.php"
 //
 //        val stringRequest = object : StringRequest(
 //            Request.Method.POST, url,

@@ -40,7 +40,7 @@ class RegistrasiActivity : AppCompatActivity() {
 
     private fun registerUser() {
         val queue = Volley.newRequestQueue(this)
-        val url = "http://10.0.2.2/anmp_uts_service/register.php"
+        val url = "http://10.0.2.2/anmp_uts/register.php"
 
         val stringRequest = object : StringRequest(Request.Method.POST, url,
             Response.Listener<String> { response ->
