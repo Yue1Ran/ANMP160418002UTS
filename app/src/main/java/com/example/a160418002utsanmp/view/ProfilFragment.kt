@@ -1,60 +1,85 @@
 package com.example.a160418002utsanmp.view
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.example.a160418002utsanmp.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfilFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfilFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfilFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProfilFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+//    private lateinit var txtNamaDepan: EditText
+//    private lateinit var txtNamaBelakang: EditText
+//    private lateinit var txtPassword: EditText
+//    private lateinit var btnSave: Button
+//    private lateinit var btnLogout: Button
+//
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_login)
+//
+//        txtNamaDepan = findViewById(R.id.txtNamaDepanP)
+//        txtNamaBelakang = findViewById(R.id.txtNamaBelakangP)
+//        txtPassword = findViewById(R.id.txtUbahPasswordP)
+//        btnLogout = findViewById(R.id.btnLogout)
+//        btnSave = findViewById(R.id.btnSave)
+//
+//
+//        btnLogout.setOnClickListener {
+//            logout()
+//        }
+//    }
+//
+//    private fun loginUser() {
+//        val queue = Volley.newRequestQueue(this)
+//        val url = "http://10.0.2.2/anmp_uts_service/login.php"
+//
+//        val stringRequest = object : StringRequest(
+//            Request.Method.POST, url,
+//            Response.Listener<String> { response ->
+//                // Cek apakah respons adalah "Login berhasil"
+//                if (response.trim() == "Login berhasil") {
+//                    // Handle successful login response
+//                    Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
+//                    // You can navigate to MainActivity
+//                    Log.d("Response", response) // Log response
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
+//                    finish() // Menutup LoginActivity setelah berhasil login
+//                } else {
+//                    // Respons tidak sesuai dengan yang diharapkan, handle sesuai kebutuhan
+//                    // Contoh: menampilkan pesan kesalahan
+//                    Toast.makeText(this, "Respons tidak sesuai: $response", Toast.LENGTH_SHORT).show()
+//                    Log.e("Response", "Respons tidak sesuai: $response")
+//                }
+//            },
+//            Response.ErrorListener { error ->
+//                // Handle error
+//                val errorMessage = "Error occurred: " + error.message
+//                Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+//                // You can display an error message
+//                Log.e("Error", errorMessage) // Log error message
+//            }) {
+//
+//            override fun getParams(): Map<String, String> {
+//                val params = HashMap<String, String>()
+//                params["username"] = txtNamaDepan.text.toString()
+//                params["username"] = txtNamaBelakang.text.toString()
+//                params["password"] = txtPassword.text.toString()
+//                return params
+//            }
+//        }
+//
+//        // Add the request to the RequestQueue.
+//        queue.add(stringRequest)
+//    }
 }
